@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://keycloak:8080/realms/myrealm  # Replace with actual Keycloak URL
+
+  ldap:
+    urls: ldaps://ad-server.example.com:636  # Replace with actual AD LDAPS server URL
+    base: dc=example,dc=com  # Replace with actual base DN
+    context-source:
+      ssl:
+        enabled: true
+        keystore: classpath:keystore.p12  # Replace with actual keystore path
+        keystore-password: changeit  # Replace with keystore password
+        truststore: classpath:truststore.p12  # Replace with actual truststore path
+        truststore-password: changeit  # Replace with truststore password
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info

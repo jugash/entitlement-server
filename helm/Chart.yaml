@@ -1,0 +1,22 @@
+apiVersion: v2
+name: keycloak-entitlements-service
+description: A Helm chart for deploying the Keycloak Entitlements Service on OpenShift
+
+type: application
+
+version: 0.1.0
+appVersion: "0.0.1-SNAPSHOT"
+
+keywords:
+  - keycloak
+  - entitlements
+  - openshift
+  - spring-boot
+
+sources:
+  - https://github.com/example/keycloak-entitlements-service
+
+maintainers:
+  - name: Example
+    email: example@example.com
+    url: https://example.com
